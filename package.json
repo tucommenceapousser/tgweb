@@ -1,0 +1,16 @@
+{
+  "name": "telegram-html-uploader",
+  "version": "1.0.0",
+  "description": "Bot Telegram permettant d'uploader des fichiers HTML et de les héberger",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "multer": "^1.4.5-lts.1",
+    "telegraf": "^4.12.2"
+  }
+}
