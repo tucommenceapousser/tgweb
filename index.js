@@ -58,7 +58,7 @@ bot.on("document", async (ctx) => {
   const validExtensions = [".html", ".Html", ".phtml", ".shtml"];
   const fileExtension = path.extname(file.file_name);
   if (!validExtensions.includes(fileExtension)) {
-    return ctx.reply("❌ Veuillez envoyer un fichier `.html`, `.phtml` ou `.shtml` uniquement.");
+    return ctx.reply("❌ Veuillez envoyer un fichier `.html`, `.Html`, `.phtml` ou `.shtml` uniquement.");
   }
 
   // Récupérer le nom personnalisé ou utiliser le nom original
